@@ -65,9 +65,55 @@ public class Principal extends javax.swing.JFrame {
         cb_estado = new javax.swing.JComboBox<>();
         cb_sectrab = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        tf_ticket = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        tf_dinero_cliente = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        tf_edad_cliente = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        tf_id_cliente = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        cb_nacionalidad_cliente = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
+        tf_lugar_nacimiento_cliente = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        tf_nombre_cliente = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        bt_color_cliente = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        cb_sectra_jefe = new javax.swing.JComboBox<>();
+        jLabel30 = new javax.swing.JLabel();
+        tf_clientesat_jefe = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        tf_ganancia_jefe = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        tf_edad_jefe = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        tf_id_jefe = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        cb_nacionalidad_jefe = new javax.swing.JComboBox<>();
+        jLabel35 = new javax.swing.JLabel();
+        tf_lugar_nacimiento_jefe = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        tf_nombre_jefe = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        bt_color_jefe = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        tf_precio_baleada = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        tf_peso = new javax.swing.JTextField();
+        tf_altura = new javax.swing.JTextField();
+        tf_precio_gato = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -133,7 +179,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(145, Short.MAX_VALUE)
+                .addContainerGap(165, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel4)
@@ -252,7 +298,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(141, Short.MAX_VALUE)
+                .addContainerGap(161, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -361,54 +407,359 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Empleado", jPanel1);
 
+        jLabel21.setText("Ticket:");
+
+        jLabel22.setText("Dinero:");
+
+        jLabel23.setText("Edad:");
+
+        jLabel24.setText("ID:");
+
+        jLabel25.setText("Nacionalidad:");
+
+        cb_nacionalidad_cliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado Unidense", "Canadiense", "Mexicano", "Hondureño", "Guatemalteco", "Salvadoreño", "Nicaraguense", "Costarricense", "Panameño", "Ecuatoriano", "Brazileño", "Inglés" }));
+
+        jLabel26.setText("Lugar de Nacimiento:");
+
+        jLabel27.setText("Nombre:");
+
+        jLabel28.setText("Color:");
+
+        bt_color_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_color_clienteActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Agregar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 594, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel26)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_lugar_nacimiento_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel28))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_nombre_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt_color_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLabel25)
+                            .addGap(18, 18, 18)
+                            .addComponent(cb_nacionalidad_cliente, 0, 209, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel23)
+                                .addComponent(jLabel24))
+                            .addGap(30, 30, 30)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_edad_cliente, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                                .addComponent(tf_id_cliente))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel21))
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_dinero_cliente, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                            .addComponent(tf_ticket))))
+                .addContainerGap(145, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(250, 250, 250))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(tf_ticket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(tf_dinero_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(tf_edad_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(tf_id_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(cb_nacionalidad_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(tf_lugar_nacimiento_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(tf_nombre_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(bt_color_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(41, 41, 41))
         );
 
         jTabbedPane1.addTab("Cliente", jPanel2);
+
+        jLabel29.setText("Sección de Trabajo:");
+
+        cb_sectra_jefe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Venta de Gatos", "Venta de Baleadas" }));
+
+        jLabel30.setText("Clientes Atendidos:");
+
+        jLabel31.setText("Ganancia:");
+
+        jLabel32.setText("Edad:");
+
+        jLabel33.setText("ID:");
+
+        jLabel34.setText("Nacionalidad:");
+
+        cb_nacionalidad_jefe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado Unidense", "Canadiense", "Mexicano", "Hondureño", "Guatemalteco", "Salvadoreño", "Nicaraguense", "Costarricense", "Panameño", "Ecuatoriano", "Brazileño", "Inglés" }));
+
+        jLabel35.setText("Lugar de Nacimiento:");
+
+        jLabel36.setText("Nombre:");
+
+        jLabel37.setText("Color:");
+
+        bt_color_jefe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_color_jefeActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Agregar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 594, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel35)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_lugar_nacimiento_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel37))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_nombre_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt_color_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                            .addComponent(jLabel34)
+                            .addGap(18, 18, 18)
+                            .addComponent(cb_nacionalidad_jefe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel32)
+                                .addComponent(jLabel33))
+                            .addGap(30, 30, 30)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tf_edad_jefe)
+                                .addComponent(tf_id_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel29)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cb_sectra_jefe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel30)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(tf_clientesat_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel31)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(tf_ganancia_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(19, 19, 19)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(45, 45, 45)))
+                .addGap(105, 105, 105))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(260, 260, 260)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(cb_sectra_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(tf_clientesat_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(tf_ganancia_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(tf_edad_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(tf_id_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(cb_nacionalidad_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(tf_lugar_nacimiento_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(tf_nombre_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(bt_color_jefe, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addGap(38, 38, 38))
         );
 
         jTabbedPane1.addTab("Jefe", jPanel3);
+
+        jLabel38.setText("Precio:");
+
+        jButton6.setText("Agregar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 594, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(173, 173, 173)
+                        .addComponent(jLabel38)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_precio_baleada, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(jButton6)))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(tf_precio_baleada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(154, 154, 154))
         );
 
         jTabbedPane1.addTab("Baleada", jPanel4);
+
+        jLabel39.setText("Peso:");
+
+        jLabel40.setText("Altura:");
+
+        jLabel41.setText("Precio:");
+
+        jButton7.setText("Agregar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 594, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel41)
+                                .addGap(18, 18, 18)
+                                .addComponent(tf_precio_gato))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel40)
+                                .addGap(18, 18, 18)
+                                .addComponent(tf_altura, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel39)
+                                .addGap(18, 18, 18)
+                                .addComponent(tf_peso, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addComponent(jButton7)))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 478, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(tf_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(tf_altura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(tf_precio_gato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(84, 84, 84)
+                .addComponent(jButton7)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Gato", jPanel5);
@@ -492,8 +843,17 @@ public class Principal extends javax.swing.JFrame {
             lugar_nacimiento = tf_lugar_nacimiento_familiar.getText();
             nombre = tf_nombre_familiar.getText();
             color = bt_color.getBackground();
-            //padre = (Familiar) tf_padre_familiar.getText();
+            lista.add(new Familiar(edad, id, nacionalidad, lugar_nacimiento, nombre, color, new Familiar()));
+            JOptionPane.showMessageDialog(this, "El familiar ha sdo agregado exitosamente");
+            tf_edad_familiar.setText("");
+            tf_id_familiar.setText("");
+            cb_nacionalidad.setSelectedIndex(0);
+            tf_lugar_nacimiento_familiar.setText("");
+            tf_nombre_familiar.setText("");
+            bt_color.setBackground(Color.WHITE);
+            tf_padre_familiar.setText("");
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -536,6 +896,105 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ocurrió un error y no se guardaron los datos");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void bt_color_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_color_clienteActionPerformed
+        bt_color_cliente.setBackground(JColorChooser.showDialog(this, "Seleccione un color", Color.WHITE));
+    }//GEN-LAST:event_bt_color_clienteActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        String nacionalidad, lugar_nacimiento, nombre;
+        double dinero;
+        int edad, ticket;
+        long id;
+        Color color;
+        try {
+            ticket = 0;
+            dinero = Double.parseDouble(tf_dinero_cliente.getText());
+            edad = Integer.parseInt(tf_edad_cliente.getText());
+            id = Long.parseLong(tf_id_cliente.getText());
+            nacionalidad = cb_nacionalidad_cliente.getSelectedItem().toString();
+            lugar_nacimiento = tf_lugar_nacimiento_cliente.getText();
+            nombre = tf_nombre_cliente.getText();
+            color = bt_color_cliente.getBackground();
+            lista.add(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            JOptionPane.showMessageDialog(this, "El cliente ha sido agregado exitosamnete");
+            tf_ticket.setText("");
+            tf_dinero_cliente.setText("");
+            tf_edad_cliente.setText("");
+            tf_id_cliente.setText("");
+            cb_nacionalidad_cliente.setSelectedIndex(0);
+            tf_lugar_nacimiento_cliente.setText("");
+            tf_nombre_cliente.setText("");
+            bt_color_cliente.setBackground(Color.WHITE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void bt_color_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_color_jefeActionPerformed
+        bt_color_jefe.setBackground(JColorChooser.showDialog(this, "Seleccione un color", Color.WHITE));
+    }//GEN-LAST:event_bt_color_jefeActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        String nacionalidad, lugar_nacimiento, nombre, seccion_trabajo;
+        double ganancia;
+        int edad, clientes_atendidos;
+        long id;
+        Color color;
+        try {
+            seccion_trabajo = cb_sectra_jefe.getSelectedItem().toString();
+            clientes_atendidos = Integer.parseInt(tf_clientesat_jefe.getText());
+            ganancia = Double.parseDouble(tf_ganancia_jefe.getText());
+            edad = Integer.parseInt(tf_edad_jefe.getText());
+            id = Long.parseLong(tf_id_jefe.getText());
+            nacionalidad = cb_nacionalidad_jefe.getSelectedItem().toString();
+            lugar_nacimiento = tf_lugar_nacimiento_jefe.getText();
+            nombre = tf_nombre_jefe.getText();
+            color = bt_color_jefe.getBackground();
+            lista.add(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            JOptionPane.showMessageDialog(this, "El jefe ha sido agregado exitosamnete");
+            cb_sectra_jefe.setSelectedIndex(0);
+            tf_clientesat_jefe.setText("");
+            tf_ganancia_jefe.setText("");
+            tf_edad_jefe.setText("");
+            tf_id_jefe.setText("");
+            cb_nacionalidad_jefe.setSelectedIndex(0);
+            tf_lugar_nacimiento_jefe.setText("");
+            tf_nombre_jefe.setText("");
+            bt_color_jefe.setBackground(Color.WHITE);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        double precio;
+        try {
+            precio = Double.parseDouble(tf_precio_baleada.getText());
+            lista.add(new Baleadas(precio));
+            JOptionPane.showMessageDialog(this, "La baleada ha sido agregada exitosamente");
+            tf_precio_baleada.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        double precio, peso, altura;
+        try {
+            precio = Double.parseDouble(tf_precio_gato.getText());
+            peso = Double.parseDouble(tf_peso.getText());
+            altura = Double.parseDouble(tf_altura.getText());
+            lista.add(new Gatos(peso, altura, precio));
+            JOptionPane.showMessageDialog(this, "El gato ha sido agregado exitosamente");
+            tf_precio_gato.setText("");
+            tf_peso.setText("");
+            tf_altura.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -562,14 +1021,23 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bt_color;
+    private javax.swing.JButton bt_color_cliente;
     private javax.swing.JButton bt_color_empleado;
+    private javax.swing.JButton bt_color_jefe;
     private javax.swing.JComboBox<String> cb_estado;
     private javax.swing.JComboBox<String> cb_nacionalidad;
+    private javax.swing.JComboBox<String> cb_nacionalidad_cliente;
     private javax.swing.JComboBox<String> cb_nacionalidad_empleado;
+    private javax.swing.JComboBox<String> cb_nacionalidad_jefe;
+    private javax.swing.JComboBox<String> cb_sectra_jefe;
     private javax.swing.JComboBox<String> cb_sectrab;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -583,8 +1051,29 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -607,18 +1096,34 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTree jTree1;
     private javax.swing.JDialog jd_agregar;
     private javax.swing.JDialog jd_arbol;
+    private javax.swing.JTextField tf_altura;
+    private javax.swing.JTextField tf_clientesat_jefe;
+    private javax.swing.JTextField tf_dinero_cliente;
+    private javax.swing.JTextField tf_edad_cliente;
     private javax.swing.JTextField tf_edad_empleado;
     private javax.swing.JTextField tf_edad_familiar;
+    private javax.swing.JTextField tf_edad_jefe;
+    private javax.swing.JTextField tf_ganancia_jefe;
     private javax.swing.JTextField tf_he_empleado;
     private javax.swing.JTextField tf_hs_empleado;
+    private javax.swing.JTextField tf_id_cliente;
     private javax.swing.JTextField tf_id_empleado;
     private javax.swing.JTextField tf_id_familiar;
+    private javax.swing.JTextField tf_id_jefe;
+    private javax.swing.JTextField tf_lugar_nacimiento_cliente;
     private javax.swing.JTextField tf_lugar_nacimiento_empleado;
     private javax.swing.JTextField tf_lugar_nacimiento_familiar;
+    private javax.swing.JTextField tf_lugar_nacimiento_jefe;
+    private javax.swing.JTextField tf_nombre_cliente;
     private javax.swing.JTextField tf_nombre_familiar;
+    private javax.swing.JTextField tf_nombre_jefe;
     private javax.swing.JTextField tf_nombre_nombre;
     private javax.swing.JTextField tf_padre_familiar;
+    private javax.swing.JTextField tf_peso;
+    private javax.swing.JTextField tf_precio_baleada;
+    private javax.swing.JTextField tf_precio_gato;
     private javax.swing.JTextField tf_sueldo_empleado;
+    private javax.swing.JTextField tf_ticket;
     // End of variables declaration//GEN-END:variables
     ArrayList lista = new ArrayList();
 }
