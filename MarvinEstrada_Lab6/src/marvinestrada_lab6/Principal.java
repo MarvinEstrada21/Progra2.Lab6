@@ -139,6 +139,8 @@ public class Principal extends javax.swing.JFrame {
         jd_tabla = new javax.swing.JDialog();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        pp_menu = new javax.swing.JPopupMenu();
+        mi_eliminar = new javax.swing.JMenuItem();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -953,6 +955,11 @@ public class Principal extends javax.swing.JFrame {
                 "Nombre", "Edad", "Nacionalidad", "Lugar de Nacimiento"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(jTable1);
 
         javax.swing.GroupLayout jd_tablaLayout = new javax.swing.GroupLayout(jd_tabla.getContentPane());
@@ -971,6 +978,14 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(106, Short.MAX_VALUE))
         );
+
+        mi_eliminar.setText("jMenuItem1");
+        mi_eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mi_eliminarMouseClicked(evt);
+            }
+        });
+        pp_menu.add(mi_eliminar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1264,7 +1279,7 @@ public class Principal extends javax.swing.JFrame {
 
             DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
             Object[] newrow = {tf_nombre_nombre.getText(), Integer.parseInt(tf_edad_empleado.getText()),
-                               cb_nacionalidad_empleado.getSelectedItem().toString(), tf_lugar_nacimiento_empleado};
+                               cb_nacionalidad_empleado.getSelectedItem().toString(), tf_lugar_nacimiento_empleado.getText()};
             modelo.addRow(newrow);
             jTable1.setModel(modelo);
             
@@ -1306,7 +1321,7 @@ public class Principal extends javax.swing.JFrame {
 
             DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
             Object[] newrow = {tf_nombre_cliente.getText(), Integer.parseInt(tf_edad_cliente.getText()),
-                               cb_nacionalidad_cliente.getSelectedItem().toString(), tf_lugar_nacimiento_cliente};
+                               cb_nacionalidad_cliente.getSelectedItem().toString(), tf_lugar_nacimiento_cliente.getText()};
             modelo.addRow(newrow);
             jTable1.setModel(modelo);
             
@@ -1350,7 +1365,7 @@ public class Principal extends javax.swing.JFrame {
             
             DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
             Object[] newrow = {tf_nombre_jefe.getText(), Integer.parseInt(tf_edad_jefe.getText()),
-                               cb_nacionalidad_jefe.getSelectedItem().toString(), tf_lugar_nacimiento_jefe};
+                               cb_nacionalidad_jefe.getSelectedItem().toString(), tf_lugar_nacimiento_jefe.getText()};
             modelo.addRow(newrow);
             jTable1.setModel(modelo);
             
@@ -1846,6 +1861,20 @@ public class Principal extends javax.swing.JFrame {
         this.jd_tabla.setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed
 
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        if (evt.isMetaDown()) {
+            int pp = jTable1.getSelectedRow();
+            pp_menu.show(evt.getComponent(), evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void mi_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mi_eliminarMouseClicked
+        DefaultTableModel modelo = (DefaultTableModel)jTable1.getModel();
+        modelo.removeRow(jTable1.getSelectedRow());
+        lista.remove(jTable1.getSelectedRowCount());
+        jTable1.setModel(modelo);
+    }//GEN-LAST:event_mi_eliminarMouseClicked
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1971,6 +2000,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_personas;
     private javax.swing.JDialog jd_tabla;
     private javax.swing.JTree jt_arbol;
+    private javax.swing.JMenuItem mi_eliminar;
     private javax.swing.JMenuItem mi_gbal;
     private javax.swing.JMenuItem mi_gcli;
     private javax.swing.JMenuItem mi_gemp;
@@ -1978,6 +2008,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem mi_ggat;
     private javax.swing.JMenuItem mi_gjef;
     private javax.swing.JMenuItem mi_gord;
+    private javax.swing.JPopupMenu pp_menu;
     private javax.swing.JTextField tf_altura;
     private javax.swing.JTextField tf_cantidad_ordenes;
     private javax.swing.JTextField tf_clientesat_jefe;
