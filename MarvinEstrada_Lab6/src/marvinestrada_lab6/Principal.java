@@ -10,6 +10,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -135,6 +136,9 @@ public class Principal extends javax.swing.JFrame {
         tf_altura = new javax.swing.JTextField();
         tf_precio_gato = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
+        jd_tabla = new javax.swing.JDialog();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -941,6 +945,33 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Edad", "Nacionalidad", "Lugar de Nacimiento"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jd_tablaLayout = new javax.swing.GroupLayout(jd_tabla.getContentPane());
+        jd_tabla.getContentPane().setLayout(jd_tablaLayout);
+        jd_tablaLayout.setHorizontalGroup(
+            jd_tablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_tablaLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jd_tablaLayout.setVerticalGroup(
+            jd_tablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_tablaLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(106, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton8.setText("Agregar Artículos");
@@ -973,7 +1004,12 @@ public class Principal extends javax.swing.JFrame {
 
         jButton11.setText("Reporte de Ganancias");
 
-        jButton13.setText("jButton13");
+        jButton13.setText("Eliminar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("Menu");
 
@@ -1138,20 +1174,16 @@ public class Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton9)
-                            .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton9)
+                    .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -1166,10 +1198,10 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(140, 140, 140))
         );
 
         pack();
@@ -1230,6 +1262,12 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
                                                 + " dirijase a Menu -> Guardar -> Guardar Empleado");
 
+            DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+            Object[] newrow = {tf_nombre_nombre.getText(), Integer.parseInt(tf_edad_empleado.getText()),
+                               cb_nacionalidad_empleado.getSelectedItem().toString(), tf_lugar_nacimiento_empleado};
+            modelo.addRow(newrow);
+            jTable1.setModel(modelo);
+            
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
             DefaultMutableTreeNode nodo_persona;
@@ -1266,6 +1304,12 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
                                                 + " dirijase a Menu -> Guardar -> Guardar Cliente");
 
+            DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+            Object[] newrow = {tf_nombre_cliente.getText(), Integer.parseInt(tf_edad_cliente.getText()),
+                               cb_nacionalidad_cliente.getSelectedItem().toString(), tf_lugar_nacimiento_cliente};
+            modelo.addRow(newrow);
+            jTable1.setModel(modelo);
+            
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
             DefaultMutableTreeNode nodo_persona;
@@ -1303,6 +1347,12 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "El jefe ha sido agregado exitosamnete");
             JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
                                                 + " dirijase a Menu -> Guardar -> Guardar Jefe");
+            
+            DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+            Object[] newrow = {tf_nombre_jefe.getText(), Integer.parseInt(tf_edad_jefe.getText()),
+                               cb_nacionalidad_jefe.getSelectedItem().toString(), tf_lugar_nacimiento_jefe};
+            modelo.addRow(newrow);
+            jTable1.setModel(modelo);
             
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1789,6 +1839,13 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_gc_ordActionPerformed
 
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        this.jd_tabla.setModal(true);
+        this.jd_tabla.pack();
+        this.jd_tabla.setLocationRelativeTo(this);
+        this.jd_tabla.setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1904,12 +1961,15 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTree jTree2;
     private javax.swing.JDialog jd_arbol;
     private javax.swing.JDialog jd_arbol_familiares;
     private javax.swing.JDialog jd_articulos;
     private javax.swing.JDialog jd_personas;
+    private javax.swing.JDialog jd_tabla;
     private javax.swing.JTree jt_arbol;
     private javax.swing.JMenuItem mi_gbal;
     private javax.swing.JMenuItem mi_gcli;
