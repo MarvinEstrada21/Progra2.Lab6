@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 public class Principal extends javax.swing.JFrame {
     public Principal() {
@@ -21,7 +23,7 @@ public class Principal extends javax.swing.JFrame {
 
         jd_arbol = new javax.swing.JDialog();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
+        jt_arbol = new javax.swing.JTree();
         jd_agregar = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
@@ -114,9 +116,13 @@ public class Principal extends javax.swing.JFrame {
         tf_altura = new javax.swing.JTextField();
         tf_precio_gato = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        jd_arbol_familiares = new javax.swing.JDialog();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTree2 = new javax.swing.JTree();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -124,9 +130,9 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
 
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Raíz");
-        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(jTree1);
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Programas");
+        jt_arbol.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(jt_arbol);
 
         javax.swing.GroupLayout jd_arbolLayout = new javax.swing.GroupLayout(jd_arbol.getContentPane());
         jd_arbol.getContentPane().setLayout(jd_arbolLayout);
@@ -775,14 +781,36 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
-        jLabel14.setText("jLabel14");
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Raíz");
+        jTree2.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(jTree2);
 
-        jLabel17.setText("jLabel17");
+        javax.swing.GroupLayout jd_arbol_familiaresLayout = new javax.swing.GroupLayout(jd_arbol_familiares.getContentPane());
+        jd_arbol_familiares.getContentPane().setLayout(jd_arbol_familiaresLayout);
+        jd_arbol_familiaresLayout.setHorizontalGroup(
+            jd_arbol_familiaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_arbol_familiaresLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(128, Short.MAX_VALUE))
+        );
+        jd_arbol_familiaresLayout.setVerticalGroup(
+            jd_arbol_familiaresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_arbol_familiaresLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jButton1.setText("Agregar");
+        jButton8.setText("Agregar Artículos");
+
+        jButton9.setText("Agregar Personas");
+
+        jButton1.setText("Mostrar Arbol General");
+
+        jButton10.setText("Mostrar Arbol de Familares");
 
         jMenu1.setText("Menu");
 
@@ -811,16 +839,31 @@ public class Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(82, 82, 82)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addGap(81, 81, 81)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
 
         pack();
@@ -881,6 +924,13 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_empleado.getBackground();
             lista.add(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El empleado ha sido agregado exitosamente");
+            
+            DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+            DefaultMutableTreeNode nodo_persona;
+            nodo_persona = new DefaultMutableTreeNode(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            raiz.add(nodo_persona);
+            
             cb_nacionalidad_empleado.setSelectedIndex(0);
             tf_he_empleado.setText("");
             tf_hs_empleado.setText("");
@@ -918,6 +968,13 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_cliente.getBackground();
             lista.add(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El cliente ha sido agregado exitosamnete");
+            
+            DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+            DefaultMutableTreeNode nodo_persona;
+            nodo_persona = new DefaultMutableTreeNode(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            raiz.add(nodo_persona);
+            
             tf_ticket.setText("");
             tf_dinero_cliente.setText("");
             tf_edad_cliente.setText("");
@@ -929,6 +986,7 @@ public class Principal extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
         }
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void bt_color_jefeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_color_jefeActionPerformed
@@ -953,6 +1011,13 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_jefe.getBackground();
             lista.add(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El jefe ha sido agregado exitosamnete");
+            
+            DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+            DefaultMutableTreeNode nodo_persona;
+            nodo_persona = new DefaultMutableTreeNode(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            raiz.add(nodo_persona);
+            
             cb_sectra_jefe.setSelectedIndex(0);
             tf_clientesat_jefe.setText("");
             tf_ganancia_jefe.setText("");
@@ -1032,21 +1097,22 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_sectra_jefe;
     private javax.swing.JComboBox<String> cb_sectrab;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -1092,10 +1158,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTree jTree1;
+    private javax.swing.JTree jTree2;
     private javax.swing.JDialog jd_agregar;
     private javax.swing.JDialog jd_arbol;
+    private javax.swing.JDialog jd_arbol_familiares;
+    private javax.swing.JTree jt_arbol;
     private javax.swing.JTextField tf_altura;
     private javax.swing.JTextField tf_clientesat_jefe;
     private javax.swing.JTextField tf_dinero_cliente;
