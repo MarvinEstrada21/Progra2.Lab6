@@ -979,7 +979,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(106, Short.MAX_VALUE))
         );
 
-        mi_eliminar.setText("jMenuItem1");
+        mi_eliminar.setText("Eliminar");
         mi_eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mi_eliminarMouseClicked(evt);
