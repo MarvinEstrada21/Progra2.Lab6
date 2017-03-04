@@ -14,8 +14,8 @@ public class Empleado extends Persona{
         super();
     }
 
-    public Empleado(String seccion_trabajo, String hora_entrada, String hora_salida, double sueldo, String estado, int edad, long id, String nacionalidad, String lugar_nacimiento, String nombre, DefaultTreeModel arbol_genealogico, Color color_piel, Familiar familiar) {
-        super(edad, id, nacionalidad, lugar_nacimiento, nombre, arbol_genealogico, color_piel, familiar);
+    public Empleado(String seccion_trabajo, String hora_entrada, String hora_salida, double sueldo, String estado, int edad, long id, String nacionalidad, String lugar_nacimiento, String nombre, DefaultTreeModel arbol_genealogico, Color color_piel) {
+        super(edad, id, nacionalidad, lugar_nacimiento, nombre, arbol_genealogico, color_piel);
         this.seccion_trabajo = seccion_trabajo;
         this.hora_entrada = hora_entrada;
         this.hora_salida = hora_salida;

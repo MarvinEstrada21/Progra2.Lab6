@@ -1,6 +1,7 @@
 package marvinestrada_lab6;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.tree.DefaultTreeModel;
 
 public class Persona {
@@ -11,12 +12,12 @@ public class Persona {
     private String nombre;
     private DefaultTreeModel arbol_genealogico;
     private Color color_piel;
-    private Familiar familiar;
+    private ArrayList<Familiar> lista_familiar = new ArrayList();
 
     public Persona() {
     }
 
-    public Persona(int edad, long id, String nacionalidad, String lugar_nacimiento, String nombre, DefaultTreeModel arbol_genealogico, Color color_piel, Familiar familiar) {
+    public Persona(int edad, long id, String nacionalidad, String lugar_nacimiento, String nombre, DefaultTreeModel arbol_genealogico, Color color_piel) {
         this.edad = edad;
         this.id = id;
         this.nacionalidad = nacionalidad;
@@ -24,7 +25,6 @@ public class Persona {
         this.nombre = nombre;
         this.arbol_genealogico = arbol_genealogico;
         this.color_piel = color_piel;
-        this.familiar = familiar;
     }
 
     public int getEdad() {
@@ -83,12 +83,16 @@ public class Persona {
         this.color_piel = color_piel;
     }
 
-    public Familiar getFamiliar() {
-        return familiar;
+    public ArrayList<Familiar> getLista_familiar() {
+        return lista_familiar;
     }
 
-    public void setFamiliar(Familiar familiar) {
-        this.familiar = familiar;
+    public void setLista_familiar(ArrayList<Familiar> lista_familiar) {
+        this.lista_familiar = lista_familiar;
+    }
+    
+    public void setFamiliar(Familiar fam){
+        lista_familiar.add(fam);
     }
 
     public String toString() {

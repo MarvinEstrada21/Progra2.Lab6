@@ -6,23 +6,23 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AdminBaleadas {
-    private ArrayList<Baleadas> lista_baleadas = new ArrayList();
+public class AdminOrdenes {
+    private ArrayList<Ordenes> lista_ordenes = new ArrayList();
     private File archivo = null;
 
-    public AdminBaleadas() {
+    public AdminOrdenes() {
     }
 
-    public AdminBaleadas(String path) {
+    public AdminOrdenes(String path) {
         archivo = new File(path);
     }
 
-    public ArrayList<Baleadas> getLista_baleadas() {
-        return lista_baleadas;
+    public ArrayList<Ordenes> getLista_ordenes() {
+        return lista_ordenes;
     }
 
-    public void setLista_baleadas(ArrayList<Baleadas> lista_baleadas) {
-        this.lista_baleadas = lista_baleadas;
+    public void setLista_ordenes(ArrayList<Ordenes> lista_ordenes) {
+        this.lista_ordenes = lista_ordenes;
     }
 
     public File getArchivo() {
@@ -33,13 +33,13 @@ public class AdminBaleadas {
         this.archivo = archivo;
     }
     
-    public void setBaleada(Baleadas b){
-        lista_baleadas.add(b);
+    public void setOrden(Ordenes od){
+        lista_ordenes.add(od);
     }
 
     @Override
     public String toString() {
-        return "AdminBaleadas{" + "lista_baleadas=" + lista_baleadas + ", archivo=" + archivo + '}';
+        return "AdminOrdenes{" + "lista_ordenes=" + lista_ordenes + ", archivo=" + archivo + '}';
     }
     
     public void escribirArchivo(){
@@ -48,8 +48,9 @@ public class AdminBaleadas {
         try {
             fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
-            for (Baleadas t : lista_baleadas) {
-                bw.write(t.getPrecio() + "");
+            for (Ordenes t : lista_ordenes) {
+                bw.write(t.getCantidad() + "");
+                bw.write(t.getEmpleado_atendedor()+ "");
                 bw.write(";");
             }
             bw.flush();
@@ -65,16 +66,18 @@ public class AdminBaleadas {
     
     public void cargarArchivo(){
         Scanner sc = null;
-        lista_baleadas = new ArrayList();
+        lista_ordenes = new ArrayList();
         try {
             sc = new Scanner(archivo);
             sc.useDelimiter(";");
             while (sc.hasNext()){
-                double precio;
+                int cantidad;
+                Empleado emp;
                 
-                precio = sc.nextDouble();
+                cantidad = sc.nextInt();
+                emp = null;
                 
-                lista_baleadas.add(new Baleadas(precio));
+                lista_ordenes.add(new Ordenes(cantidad, emp));
             }
         } catch (Exception e) {
         } finally {

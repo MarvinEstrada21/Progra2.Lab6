@@ -62,7 +62,6 @@ public class AdminEmpleado {
                 bw.write(t.getNombre()+ ";");
                 bw.write(t.getArbol_genealogico()+ ";");
                 bw.write(t.getColor_piel()+ ";");
-                bw.write(t.getFamiliar()+ ";");
                 bw.write(";");
             }
             bw.flush();
@@ -103,9 +102,8 @@ public class AdminEmpleado {
                 nombre = sc.next();
                 arbol = null;
                 color_piel = Color.WHITE;
-                familiar = null;
                 
-                lista_empleados.add(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_n, nombre, arbol, color_piel, familiar));
+                lista_empleados.add(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_n, nombre, arbol, color_piel));
             }
         } catch (Exception e) {
         } finally {

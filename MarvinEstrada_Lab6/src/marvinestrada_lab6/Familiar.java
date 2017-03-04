@@ -97,6 +97,6 @@ public class Familiar {
 
     @Override
     public String toString() {
-        return "Familiar{" + "nombre=" + nombre + '}';
+        return nombre;
     }
 }

@@ -58,7 +58,6 @@ public class AdminClientes {
                 bw.write(t.getLugar_nacimiento()+ ";");
                 bw.write(t.getNombre()+ ";");
                 bw.write(t.getColor_piel()+ ";");
-                bw.write(t.getFamiliar()+ ";");
                 bw.write(";");
             }
             bw.flush();
@@ -94,9 +93,8 @@ public class AdminClientes {
                 lugar_n = sc.next();
                 nombre = sc.next();
                 color_piel = Color.WHITE;
-                padre = null;
                 
-                lista_clientes.add(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_n, nombre, null, color_piel, padre));
+                lista_clientes.add(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_n, nombre, null, color_piel));
             }
         } catch (Exception e) {
         } finally {
