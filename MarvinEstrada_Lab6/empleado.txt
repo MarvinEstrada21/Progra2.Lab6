@@ -1,1 +1,0 @@
-Cocina;8:30;5:00;7500.0;Ocupado;20;9846123465;Hondureño;rtyfghkk;Pedro Pancho;null;java.awt.Color[r=255,g=255,b=255];;Cocina;8:30;5:00;7500.0;Ocupado;20;9864132;Estado Unidense;wertyuio;Pancho;null;java.awt.Color[r=0,g=0,b=0];;

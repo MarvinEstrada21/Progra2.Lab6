@@ -1,7 +1,9 @@
 package marvinestrada_lab6;
 
 import java.awt.Color;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
@@ -142,13 +144,13 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        mi_gfam = new javax.swing.JMenuItem();
+        mi_gemp = new javax.swing.JMenuItem();
+        mi_gcli = new javax.swing.JMenuItem();
+        mi_gjef = new javax.swing.JMenuItem();
+        mi_gbal = new javax.swing.JMenuItem();
+        mi_ggat = new javax.swing.JMenuItem();
+        mi_gord = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -970,53 +972,68 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu2.setText("Guardar");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Guardar Familiares");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        mi_gfam.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        mi_gfam.setText("Guardar Familiares");
+        mi_gfam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                mi_gfamActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem1);
+        jMenu2.add(mi_gfam);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem5.setText("Guardar Empleado");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        mi_gemp.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        mi_gemp.setText("Guardar Empleado");
+        mi_gemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                mi_gempActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        jMenu2.add(mi_gemp);
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem6.setText("Guardar Cliente");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        mi_gcli.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        mi_gcli.setText("Guardar Cliente");
+        mi_gcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                mi_gcliActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu2.add(mi_gcli);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem7.setText("Guardar Jefe");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        mi_gjef.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_MASK));
+        mi_gjef.setText("Guardar Jefe");
+        mi_gjef.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                mi_gjefActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem7);
+        jMenu2.add(mi_gjef);
 
-        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem8.setText("Guardar Baleada");
-        jMenu2.add(jMenuItem8);
+        mi_gbal.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        mi_gbal.setText("Guardar Baleada");
+        mi_gbal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_gbalActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mi_gbal);
 
-        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem9.setText("Guardar Gato");
-        jMenu2.add(jMenuItem9);
+        mi_ggat.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_MASK));
+        mi_ggat.setText("Guardar Gato");
+        mi_ggat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_ggatActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mi_ggat);
 
-        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem10.setText("Guardar Órden");
-        jMenu2.add(jMenuItem10);
+        mi_gord.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        mi_gord.setText("Guardar Órden");
+        mi_gord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mi_gordActionPerformed(evt);
+            }
+        });
+        jMenu2.add(mi_gord);
 
         jMenu1.add(jMenu2);
 
@@ -1031,10 +1048,20 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem3.setText("Salir");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem4.setText("About");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem4);
 
         jMenuBar1.add(jMenu1);
@@ -1102,6 +1129,8 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color.getBackground();
             lista.add(new Familiar(edad, id, nacionalidad, lugar_nacimiento, nombre, color, new Familiar()));
             JOptionPane.showMessageDialog(this, "El familiar ha sdo agregado exitosamente");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Familiar");
             
             this.jd_personas.setVisible(false);
         } catch (Exception e) {
@@ -1133,6 +1162,8 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_empleado.getBackground();
             lista.add(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El empleado ha sido agregado exitosamente");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Empleado");
 
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1167,6 +1198,8 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_cliente.getBackground();
             lista.add(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El cliente ha sido agregado exitosamnete");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Cliente");
 
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1203,6 +1236,8 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_jefe.getBackground();
             lista.add(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El jefe ha sido agregado exitosamnete");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Jefe");
             
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -1222,13 +1257,10 @@ public class Principal extends javax.swing.JFrame {
             precio = Double.parseDouble(tf_precio_baleada.getText());
             lista.add(new Baleadas(precio));
             JOptionPane.showMessageDialog(this, "La baleada ha sido agregada exitosamente");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Baleada");
             
-            AdminBaleadas ab = new AdminBaleadas("./baleadas.txt");
-            ab.cargarArchivo();
-            ab.setBaleada(new Baleadas(precio));
-            ab.escribirArchivo();
-            
-            tf_precio_baleada.setText("");
+            this.jd_articulos.setVisible(false);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
         }
@@ -1242,30 +1274,51 @@ public class Principal extends javax.swing.JFrame {
             altura = Double.parseDouble(tf_altura.getText());
             lista.add(new Gatos(peso, altura, precio));
             JOptionPane.showMessageDialog(this, "El gato ha sido agregado exitosamente");
-            
-            AdminGatos ag = new AdminGatos("./gatos.txt");
-            ag.cargarArchivo();
-            ag.setGato(new Gatos(peso, altura, precio));
-            ag.escribirArchivo();
-            
-            tf_precio_gato.setText("");
-            tf_peso.setText("");
-            tf_altura.setText("");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Gato");
+          
+            this.jd_articulos.setVisible(false);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        JFileChooser fileChooser = new JFileChooser();
-        int seleccion = fileChooser.showSaveDialog(this);
+        JFileChooser jfc= new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
         if (seleccion == JFileChooser.APPROVE_OPTION){
-            File dir = fileChooser.getSelectedFile();
-            boolean fueCreado = dir.mkdir();
-            if (fueCreado){
-                JOptionPane.showMessageDialog(this, "Directorio creado exitosamente");
-            } else {
-                JOptionPane.showMessageDialog(this, "El directorio no fue creado");
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write(cb_sectrab.getSelectedItem().toString()+ ";");
+                bw.write(tf_he_empleado.getText() + ";");
+                bw.write(tf_hs_empleado.getText() + ";");
+                bw.write(Integer.parseInt(tf_sueldo_empleado.getText()) + ";");
+                bw.write(cb_estado.getSelectedItem().toString() + ";");
+                bw.write(Integer.parseInt(tf_edad_empleado.getText()) + ";");
+                bw.write(Integer.parseInt(tf_id_empleado.getText()) + ";");
+                bw.write(cb_nacionalidad_empleado.getSelectedItem().toString() + ";");
+                bw.write(tf_lugar_nacimiento_empleado.getText() + ";");
+                bw.write(tf_nombre_nombre.getText() + ";");
+                //bw.write(bt_color_empleado.getBackground());
+                /*if (lista.get(0) instanceof Empleado){
+                    for (Object t : lista) {
+                        bw.write(t.);
+                    }
+                }*/
+                //bw.write(ta_1.getText());
+                //ta_1.setText("");
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
             }
         }
     }//GEN-LAST:event_jMenuItem2ActionPerformed
@@ -1311,6 +1364,8 @@ public class Principal extends javax.swing.JFrame {
         tf_nombre_jefe.setText("");
         bt_color_jefe.setBackground(Color.WHITE);
         
+        tf_cantidad_ordenes.setText("");
+        
         this.jd_personas.setModal(true);
         this.jd_personas.pack();
         this.jd_personas.setLocationRelativeTo(this);
@@ -1318,6 +1373,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        tf_precio_baleada.setText("");
+        
+        tf_precio_gato.setText("");
+        tf_peso.setText("");
+        tf_altura.setText("");
+            
         this.jd_articulos.setModal(true);
         this.jd_articulos.pack();
         this.jd_articulos.setLocationRelativeTo(this);
@@ -1339,14 +1400,10 @@ public class Principal extends javax.swing.JFrame {
             empleado = (Empleado)cb_empleado_ordenes.getSelectedItem();
             lista.add(new Ordenes(cantidad, empleado));
             JOptionPane.showMessageDialog(this, "La orden ha sido agregada exitosamente");
+            JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                                + " dirijase a Menu -> Guardar -> Guardar Órden");
             
-            AdminOrdenes ao = new AdminOrdenes("./ordenes.txt");
-            ao.cargarArchivo();
-            ao.setOrden(new Ordenes(cantidad, empleado));
-            ao.escribirArchivo();
-            
-            tf_cantidad_ordenes.setText("");
-            cb_empleado_ordenes.setSelectedIndex(0);
+            this.jd_personas.setVisible(false);
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -1363,7 +1420,7 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tp_generalStateChanged
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void mi_gempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_gempActionPerformed
         String seccion_trabajo, hora_entrada, hora_salida, estado, nacionalidad, lugar_nacimiento, nombre;
         double sueldo;
         int edad;
@@ -1385,9 +1442,9 @@ public class Principal extends javax.swing.JFrame {
         ae.cargarArchivo();
         ae.setEmpleado(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
         ae.escribirArchivo();
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_mi_gempActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void mi_gfamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_gfamActionPerformed
         int edad;
         long id;
         String nacionalidad, lugar_nacimiento, nombre;
@@ -1406,9 +1463,9 @@ public class Principal extends javax.swing.JFrame {
         af.cargarArchivo();
         af.setFamiliar(new Familiar(edad, id, nacionalidad, lugar_nacimiento, nombre, color, new Familiar()));
         af.escribirArchivo();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_mi_gfamActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void mi_gcliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_gcliActionPerformed
         String nacionalidad, lugar_nacimiento, nombre;
         double dinero;
         int edad, ticket;
@@ -1429,9 +1486,9 @@ public class Principal extends javax.swing.JFrame {
         ac.cargarArchivo();
         ac.setCliente(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
         ac.escribirArchivo();
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_mi_gcliActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void mi_gjefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_gjefActionPerformed
         String nacionalidad, lugar_nacimiento, nombre, seccion_trabajo;
         double ganancia;
         int edad, clientes_atendidos;
@@ -1449,9 +1506,9 @@ public class Principal extends javax.swing.JFrame {
     
         AdminJefes aj = new AdminJefes("./jefes.txt");
         aj.cargarArchivo();
-        aj.setJefe((Jefes)lista.get(0));
+        aj.setJefe(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
         aj.escribirArchivo();
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_mi_gjefActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.jd_arbol.setModal(true);
@@ -1459,6 +1516,63 @@ public class Principal extends javax.swing.JFrame {
         this.jd_arbol.setLocationRelativeTo(this);
         this.jd_arbol.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void mi_gbalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_gbalActionPerformed
+        double precio;
+        precio = Double.parseDouble(tf_precio_baleada.getText());
+        lista.add(new Baleadas(precio));
+        JOptionPane.showMessageDialog(this, "La baleada ha sido agregada exitosamente");
+        JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                            + " dirijase a Menu -> Guardar -> Guardar Baleada");
+    
+        AdminBaleadas ab = new AdminBaleadas("./baleadas.txt");
+        ab.cargarArchivo();
+        ab.setBaleada(new Baleadas(precio));
+        ab.escribirArchivo();
+    }//GEN-LAST:event_mi_gbalActionPerformed
+
+    private void mi_ggatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_ggatActionPerformed
+        double precio, peso, altura;
+        precio = Double.parseDouble(tf_precio_gato.getText());
+        peso = Double.parseDouble(tf_peso.getText());
+        altura = Double.parseDouble(tf_altura.getText());
+        lista.add(new Gatos(peso, altura, precio));
+        JOptionPane.showMessageDialog(this, "El gato ha sido agregado exitosamente");
+        JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                            + " dirijase a Menu -> Guardar -> Guardar Gato");
+            
+        AdminGatos ag = new AdminGatos("./gatos.txt");
+        ag.cargarArchivo();
+        ag.setGato(new Gatos(peso, altura, precio));
+        ag.escribirArchivo();
+    }//GEN-LAST:event_mi_ggatActionPerformed
+
+    private void mi_gordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mi_gordActionPerformed
+        int cantidad;
+        Empleado empleado;
+        cantidad = Integer.parseInt(tf_cantidad_ordenes.getText());
+        empleado = (Empleado)cb_empleado_ordenes.getSelectedItem();
+        lista.add(new Ordenes(cantidad, empleado));
+        JOptionPane.showMessageDialog(this, "La orden ha sido agregada exitosamente");
+        JOptionPane.showMessageDialog(this, "Si desea agregarlo a un archivo de texto, en este momento,"
+                                            + " dirijase a Menu -> Guardar -> Guardar Órden");
+            
+        AdminOrdenes ao = new AdminOrdenes("./ordenes.txt");
+        ao.cargarArchivo();
+        ao.setOrden(new Ordenes(cantidad, empleado));
+        ao.escribirArchivo();
+    }//GEN-LAST:event_mi_gordActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        JOptionPane.showMessageDialog(this, "Este programa es sobre un local ,encargado de vendar Baleadas y Gatos,\n"
+                                          + "en el cual se puede administrar todo el local. Todo lo que el dueño decida\n"
+                                          + "saber, lo podrá ver aquí en la diferentes opciones que se le brindan.\n"
+                                          + "HAVE A NICE DAAAAAAAAAAAAAAAY","", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -1554,16 +1668,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1582,6 +1689,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_articulos;
     private javax.swing.JDialog jd_personas;
     private javax.swing.JTree jt_arbol;
+    private javax.swing.JMenuItem mi_gbal;
+    private javax.swing.JMenuItem mi_gcli;
+    private javax.swing.JMenuItem mi_gemp;
+    private javax.swing.JMenuItem mi_gfam;
+    private javax.swing.JMenuItem mi_ggat;
+    private javax.swing.JMenuItem mi_gjef;
+    private javax.swing.JMenuItem mi_gord;
     private javax.swing.JTextField tf_altura;
     private javax.swing.JTextField tf_cantidad_ordenes;
     private javax.swing.JTextField tf_clientesat_jefe;
