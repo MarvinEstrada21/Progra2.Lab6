@@ -151,7 +151,14 @@ public class Principal extends javax.swing.JFrame {
         mi_gbal = new javax.swing.JMenuItem();
         mi_ggat = new javax.swing.JMenuItem();
         mi_gord = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        gc_fam = new javax.swing.JMenuItem();
+        gc_emp = new javax.swing.JMenuItem();
+        gc_cli = new javax.swing.JMenuItem();
+        gc_jef = new javax.swing.JMenuItem();
+        gc_bal = new javax.swing.JMenuItem();
+        gc_gat = new javax.swing.JMenuItem();
+        gc_ord = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -1037,14 +1044,72 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu1.add(jMenu2);
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
-        jMenuItem2.setText("Guardar Como...");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenu3.setText("Guardar Como...");
+
+        gc_fam.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_fam.setText("(Familiares) Guardar Como...");
+        gc_fam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                gc_famActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu3.add(gc_fam);
+
+        gc_emp.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_emp.setText("(Empleado) Guardar Como...");
+        gc_emp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gc_empActionPerformed(evt);
+            }
+        });
+        jMenu3.add(gc_emp);
+
+        gc_cli.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_cli.setText("(Cliente) Guardar Como...");
+        gc_cli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gc_cliActionPerformed(evt);
+            }
+        });
+        jMenu3.add(gc_cli);
+
+        gc_jef.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_jef.setText("(Jefe) Guardar Como...");
+        gc_jef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gc_jefActionPerformed(evt);
+            }
+        });
+        jMenu3.add(gc_jef);
+
+        gc_bal.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_bal.setText("(Baleada) Guardar Como...");
+        gc_bal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gc_balActionPerformed(evt);
+            }
+        });
+        jMenu3.add(gc_bal);
+
+        gc_gat.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_gat.setText("(Gato) Guardar Como...");
+        gc_gat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gc_gatActionPerformed(evt);
+            }
+        });
+        jMenu3.add(gc_gat);
+
+        gc_ord.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        gc_ord.setText("(Órdenes) Guardar Como...");
+        gc_ord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gc_ordActionPerformed(evt);
+            }
+        });
+        jMenu3.add(gc_ord);
+
+        jMenu1.add(jMenu3);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem3.setText("Salir");
@@ -1282,46 +1347,6 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        JFileChooser jfc= new JFileChooser();
-        int seleccion = jfc.showSaveDialog(this);
-        FileWriter fw = null;
-        BufferedWriter bw = null;
-        if (seleccion == JFileChooser.APPROVE_OPTION){
-            try {
-                File fichero = jfc.getSelectedFile();
-                fw = new FileWriter(fichero);
-                bw = new BufferedWriter(fw);
-                bw.write(cb_sectrab.getSelectedItem().toString()+ ";");
-                bw.write(tf_he_empleado.getText() + ";");
-                bw.write(tf_hs_empleado.getText() + ";");
-                bw.write(Integer.parseInt(tf_sueldo_empleado.getText()) + ";");
-                bw.write(cb_estado.getSelectedItem().toString() + ";");
-                bw.write(Integer.parseInt(tf_edad_empleado.getText()) + ";");
-                bw.write(Integer.parseInt(tf_id_empleado.getText()) + ";");
-                bw.write(cb_nacionalidad_empleado.getSelectedItem().toString() + ";");
-                bw.write(tf_lugar_nacimiento_empleado.getText() + ";");
-                bw.write(tf_nombre_nombre.getText() + ";");
-                //bw.write(bt_color_empleado.getBackground());
-                /*if (lista.get(0) instanceof Empleado){
-                    for (Object t : lista) {
-                        bw.write(t.);
-                    }
-                }*/
-                //bw.write(ta_1.getText());
-                //ta_1.setText("");
-                bw.flush();
-            } catch (Exception e) {
-            } finally {
-                try {
-                    bw.close();
-                    fw.close();
-                } catch (IOException ex) {
-                }
-            }
-        }
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         tf_edad_familiar.setText("");
@@ -1574,6 +1599,196 @@ public class Principal extends javax.swing.JFrame {
                                           + "HAVE A NICE DAAAAAAAAAAAAAAAY","", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    private void gc_empActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_empActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write(cb_sectrab.getSelectedItem().toString()+ ";");
+                bw.write(tf_he_empleado.getText() + ";");
+                bw.write(tf_hs_empleado.getText() + ";");
+                bw.write(Integer.parseInt(tf_sueldo_empleado.getText()) + ";");
+                bw.write(cb_estado.getSelectedItem().toString() + ";");
+                bw.write(Integer.parseInt(tf_edad_empleado.getText()) + ";");
+                bw.write(Integer.parseInt(tf_id_empleado.getText()) + ";");
+                bw.write(cb_nacionalidad_empleado.getSelectedItem().toString() + ";");
+                bw.write(tf_lugar_nacimiento_empleado.getText() + ";");
+                bw.write(tf_nombre_nombre.getText() + ";");
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_empActionPerformed
+
+    private void gc_famActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_famActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write(Integer.parseInt(tf_edad_familiar.getText()) + ";");
+                bw.write(Integer.parseInt(tf_id_familiar.getText()) + ";");
+                bw.write(cb_nacionalidad.getSelectedItem().toString() + ";");
+                bw.write(tf_lugar_nacimiento_familiar.getText() + ";");
+                bw.write(tf_nombre_familiar.getText() + ";");
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_famActionPerformed
+
+    private void gc_cliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_cliActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write((int) Double.parseDouble(tf_dinero_cliente.getText()));
+                bw.write(Integer.parseInt(tf_ticket.getText()) + ";");
+                bw.write(Integer.parseInt(tf_edad_cliente.getText()) + ";");
+                bw.write(Integer.parseInt(tf_id_cliente.getText()) + ";");
+                bw.write(cb_nacionalidad_cliente.getSelectedItem().toString() + ";");
+                bw.write(tf_lugar_nacimiento_cliente.getText() + ";");
+                bw.write(tf_nombre_cliente.getText() + ";");
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_cliActionPerformed
+
+    private void gc_jefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_jefActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write(cb_sectra_jefe.getSelectedItem().toString() + ";");
+                bw.write(Integer.parseInt(tf_clientesat_jefe.getText()) + ";");
+                bw.write((int) Double.parseDouble(tf_ganancia_jefe.getText()));
+                bw.write(Integer.parseInt(tf_edad_jefe.getText()) + ";");
+                bw.write(Integer.parseInt(tf_id_jefe.getText()) + ";");
+                bw.write(cb_nacionalidad_jefe.getSelectedItem().toString() + ";");
+                bw.write(tf_lugar_nacimiento_jefe.getText() + ";");
+                bw.write(tf_nombre_jefe.getText() + ";");
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_jefActionPerformed
+
+    private void gc_balActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_balActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write((int) Double.parseDouble(tf_precio_baleada.getText()));
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_balActionPerformed
+
+    private void gc_gatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_gatActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write((int) Double.parseDouble(tf_precio_baleada.getText()));
+                bw.write((int) Double.parseDouble(tf_peso.getText()));
+                bw.write((int) Double.parseDouble(tf_altura.getText()));
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_gatActionPerformed
+
+    private void gc_ordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gc_ordActionPerformed
+        JFileChooser jfc = new JFileChooser();
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            try {
+                File fichero = jfc.getSelectedFile();
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                bw.write(Integer.parseInt(tf_cantidad_ordenes.getText()));
+                bw.write(cb_empleado_ordenes.getSelectedItem().toString());
+                bw.flush();
+            } catch (Exception e) {
+            } finally {
+                try {
+                    bw.close();
+                    fw.close();
+                } catch (IOException ex) {
+                }
+            }
+        }
+    }//GEN-LAST:event_gc_ordActionPerformed
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -1611,6 +1826,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cb_nacionalidad_jefe;
     private javax.swing.JComboBox<String> cb_sectra_jefe;
     private javax.swing.JComboBox<String> cb_sectrab;
+    private javax.swing.JMenuItem gc_bal;
+    private javax.swing.JMenuItem gc_cli;
+    private javax.swing.JMenuItem gc_emp;
+    private javax.swing.JMenuItem gc_fam;
+    private javax.swing.JMenuItem gc_gat;
+    private javax.swing.JMenuItem gc_jef;
+    private javax.swing.JMenuItem gc_ord;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1667,8 +1889,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
