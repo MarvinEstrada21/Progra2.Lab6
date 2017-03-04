@@ -1,0 +1,1 @@
+Venta de Gatos;3;7500.0;50;89465123;Estado Unidense;xdrtfgbhnj;Polo;java.awt.Color[r=0,g=0,b=0];;

@@ -49,6 +49,6 @@ public class Clientes extends Persona{
 
     @Override
     public String toString() {
-        return super.toString() + "Clientes{" + "ticket=" + ticket + ", dinero=" + dinero + ", lista_ordenes=" + lista_ordenes + '}';
+        return super.toString();
     }
 }

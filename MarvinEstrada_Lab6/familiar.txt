@@ -1,1 +1,0 @@
-20;86453;Estado Unidense;hjbjn;hbjhjkn;java.awt.Color[r=0,g=0,b=0];null;;
