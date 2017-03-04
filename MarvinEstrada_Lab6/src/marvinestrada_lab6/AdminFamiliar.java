@@ -96,7 +96,10 @@ public class AdminFamiliar {
             }
         } catch (Exception e) {
         } finally {
-            sc.close();
+            try {
+                sc.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

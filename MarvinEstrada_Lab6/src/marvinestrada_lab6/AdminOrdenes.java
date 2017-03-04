@@ -81,7 +81,10 @@ public class AdminOrdenes {
             }
         } catch (Exception e) {
         } finally {
-            sc.close();
+            try {
+                sc.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

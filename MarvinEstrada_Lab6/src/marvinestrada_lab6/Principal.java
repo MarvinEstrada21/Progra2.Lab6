@@ -1,8 +1,11 @@
 package marvinestrada_lab6;
 
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JColorChooser;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -807,6 +810,11 @@ public class Principal extends javax.swing.JFrame {
         jButton8.setText("Agregar Artículos");
 
         jButton9.setText("Agregar Personas");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Mostrar Arbol General");
 
@@ -820,6 +828,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
         jMenuItem2.setText("Guardar Como...");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.SHIFT_MASK));
@@ -888,6 +901,12 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color.getBackground();
             lista.add(new Familiar(edad, id, nacionalidad, lugar_nacimiento, nombre, color, new Familiar()));
             JOptionPane.showMessageDialog(this, "El familiar ha sdo agregado exitosamente");
+            
+            AdminFamiliar af = new AdminFamiliar("./familiar.txt");
+            af.cargarArchivo();
+            af.setFamiliar(new Familiar(edad, id, nacionalidad, lugar_nacimiento, nombre, color, new Familiar()));
+            af.escribirArchivo();
+            
             tf_edad_familiar.setText("");
             tf_id_familiar.setText("");
             cb_nacionalidad.setSelectedIndex(0);
@@ -910,7 +929,7 @@ public class Principal extends javax.swing.JFrame {
         int edad;
         long id;
         Color color;
-        try {
+        //try {
             seccion_trabajo = cb_sectrab.getSelectedItem().toString();
             hora_entrada = tf_he_empleado.getText();
             hora_salida = tf_hs_empleado.getText();
@@ -924,6 +943,11 @@ public class Principal extends javax.swing.JFrame {
             color = bt_color_empleado.getBackground();
             lista.add(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El empleado ha sido agregado exitosamente");
+            
+            AdminEmpleado ae = new AdminEmpleado("./empleado.txt");
+            ae.cargarArchivo();
+            ae.setEmpleado(new Empleado(seccion_trabajo, hora_entrada, hora_salida, sueldo, estado, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            ae.escribirArchivo();
             
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
@@ -942,9 +966,9 @@ public class Principal extends javax.swing.JFrame {
             tf_lugar_nacimiento_empleado.setText("");
             tf_nombre_nombre.setText("");
             bt_color_empleado.setBackground(Color.WHITE);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Ocurrió un error y no se guardaron los datos");
-        }
+        //} catch (Exception e) {
+            //JOptionPane.showMessageDialog(this, "Ocurrió un error y no se guardaron los datos");
+        //}
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void bt_color_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_color_clienteActionPerformed
@@ -1059,6 +1083,27 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        int seleccion = fileChooser.showSaveDialog(this);
+        if (seleccion == JFileChooser.APPROVE_OPTION){
+            File dir = fileChooser.getSelectedFile();
+            boolean fueCreado = dir.mkdir();
+            if (fueCreado){
+                JOptionPane.showMessageDialog(this, "Directorio creado exitosamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "El directorio no fue creado");
+            }
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        this.jd_agregar.setModal(true);
+        this.jd_agregar.pack();
+        this.jd_agregar.setLocationRelativeTo(this);
+        this.jd_agregar.setVisible(true);
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     public static void main(String args[]) {
         try {

@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.tree.DefaultTreeModel;
@@ -93,10 +94,10 @@ public class AdminEmpleado {
                 seccion_trabajo = sc.next();
                 hora_entrada = sc.next();
                 hora_salida = sc.next();
-                sueldo = sc.nextInt();
+                sueldo = sc.nextDouble();
                 estado = sc.next();
                 edad = sc.nextInt();
-                id = sc.nextInt();
+                id = sc.nextLong();
                 nacionalidad = sc.next();
                 lugar_n = sc.next();
                 nombre = sc.next();
@@ -107,7 +108,10 @@ public class AdminEmpleado {
             }
         } catch (Exception e) {
         } finally {
-            sc.close();
+            try {
+                sc.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

@@ -1,0 +1,1 @@
+Cocina;jnk;jnkm;7845.0;Ocupado;41;541;Estado Unidense;hhbjn;bjk;null;java.awt.Color[r=255,g=255,b=255];;
