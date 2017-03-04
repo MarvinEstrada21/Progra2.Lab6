@@ -993,6 +993,11 @@ public class Principal extends javax.swing.JFrame {
             lista.add(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El cliente ha sido agregado exitosamnete");
             
+            AdminClientes ac = new AdminClientes("./clientes.txt");
+            ac.cargarArchivo();
+            ac.setCliente(new Clientes(ticket, dinero, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            ac.escribirArchivo();
+            
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
             DefaultMutableTreeNode nodo_persona;
@@ -1036,6 +1041,11 @@ public class Principal extends javax.swing.JFrame {
             lista.add(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
             JOptionPane.showMessageDialog(this, "El jefe ha sido agregado exitosamnete");
             
+            AdminJefes aj = new AdminJefes("./jefes.txt");
+            aj.cargarArchivo();
+            aj.setJefe(new Jefes(seccion_trabajo, clientes_atendidos, ganancia, edad, id, nacionalidad, lugar_nacimiento, nombre, null, color));
+            aj.escribirArchivo();
+            
             DefaultTreeModel m = (DefaultTreeModel) jt_arbol.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
             DefaultMutableTreeNode nodo_persona;
@@ -1062,6 +1072,12 @@ public class Principal extends javax.swing.JFrame {
             precio = Double.parseDouble(tf_precio_baleada.getText());
             lista.add(new Baleadas(precio));
             JOptionPane.showMessageDialog(this, "La baleada ha sido agregada exitosamente");
+            
+            AdminBaleadas ab = new AdminBaleadas("./baleadas.txt");
+            ab.cargarArchivo();
+            ab.setBaleada(new Baleadas(precio));
+            ab.escribirArchivo();
+            
             tf_precio_baleada.setText("");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ha ocurrido un error y no se guardaron los datos");
@@ -1076,6 +1092,12 @@ public class Principal extends javax.swing.JFrame {
             altura = Double.parseDouble(tf_altura.getText());
             lista.add(new Gatos(peso, altura, precio));
             JOptionPane.showMessageDialog(this, "El gato ha sido agregado exitosamente");
+            
+            AdminGatos ag = new AdminGatos("./gatos.txt");
+            ag.cargarArchivo();
+            ag.setGato(new Gatos(peso, altura, precio));
+            ag.escribirArchivo();
+            
             tf_precio_gato.setText("");
             tf_peso.setText("");
             tf_altura.setText("");
